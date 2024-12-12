@@ -8,11 +8,13 @@ canvas.pack()
 
 lopticky = []
 
+a = tk.PhotoImage(file="Apple.png")
 def vytvor_lopticky():
+    global a
     x = -10
     for i in range(10):
         x += 30
-        lopticka = canvas.create_oval(x, 10, x+20, 30, fill="red")
+        lopticka = canvas.create_image(x, 10, image=a)
         lopticky.append(lopticka)
 
 def Start():
